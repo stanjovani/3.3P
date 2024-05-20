@@ -1,0 +1,65 @@
+// C++ code
+//
+int BUTTON1 = 2;
+int BUTTON2 = 3;
+int BUTTON3 = 4;
+int LED1 = 5;
+int LED2 = 6;
+int LED3 = 7;
+int LED4 = 8;
+
+
+void setup()
+{
+  pinMode(BUTTON1, INPUT);
+  pinMode(BUTTON2, INPUT);
+  pinMode(BUTTON3, INPUT);
+  pinMode(LED1, OUTPUT);
+  pinMode(LED2, OUTPUT);
+  pinMode(LED3, OUTPUT);
+  pinMode(LED4, OUTPUT);
+  
+} 
+
+void loop()
+{
+  if(digitalRead(BUTTON1) == HIGH)
+  {
+    digitalWrite(LED1, HIGH);
+    digitalWrite(LED3, HIGH);
+    
+  }
+  else
+  {
+    digitalWrite(LED1, LOW);
+    digitalWrite(LED3, LOW);
+    
+  }
+  if(digitalRead(BUTTON2) == HIGH)
+  {
+    digitalWrite(LED2, HIGH);
+    digitalWrite(LED4, HIGH);
+    
+  }
+  else
+  {
+    digitalWrite(LED2, LOW);
+    digitalWrite(LED4, LOW);
+    
+  }
+  if(digitalRead(BUTTON3) == HIGH)
+  {
+    digitalWrite(LED1, HIGH);
+    digitalWrite(LED2, HIGH);
+    digitalWrite(LED3, HIGH);
+    digitalWrite(LED4, HIGH);
+    
+  }
+  else
+  {
+    digitalWrite(LED1, LOW);
+    digitalWrite(LED2, LOW);
+    digitalWrite(LED3, LOW);
+    digitalWrite(LED4, LOW);
+  }
+}
